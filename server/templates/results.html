@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results</title>
+</head>
+<body>
+	<h2>Results:</h2>
+	<div class="results">
+		{% if prediction == 1%}
+		<h2 style="color:red">Meligant</h2>
+		{% elif prediction == 0%}
+		<h2 style="color: green">Benign</h2>
+		{% endif %}
+	</div>
+
+</body>
+</html>
