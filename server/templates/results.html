@@ -1,17 +1,28 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-	<title>Results</title>
-</head>
-<body>
-	<h2>Results:</h2>
-	<div class="results">
-		{% if prediction == 1%}
-		<h2 style="color:red">Meligant</h2>
-		{% elif prediction == 0%}
-		<h2 style="color: green">Benign</h2>
-		{% endif %}
-	</div>
+	<head>
+		<title> Pastry </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}" />
+		<script type="text/javascript"src="{{ url_for('static',filename='js/main.js')}}"></script>
+	</head>
+	<body class="is-preload" style="background-image:url({{ url_for('static',filename='bg03.jpg')}});">
 
-</body>
+  <h2>Results:</h2>
+  <div class="results"style="float:left">
+    {% if prediction == 1%}
+    <h2 style="color:red">Meligant</h2>
+    {% elif prediction == 0%}
+    <h2 style="color: green">Benign</h2>
+    {% endif %}
+
+
+
+
+
+			<!-- Scripts -->
+			<!--<script type="text/javascript"src="{{ url_for('static',filename='js/main.js')}}"></script>-->
+
+	</body>
 </html>
